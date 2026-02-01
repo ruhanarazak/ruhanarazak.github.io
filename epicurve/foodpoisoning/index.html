@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -18,17 +18,48 @@
 
   <p class="subtitle">
     <b>Epidemic Curve Generator for Food Poisoning</b><br>
-    Easily generate an epidemic curve from Food Poisoning linelisting extracted from eNotifikasi online system.
-    
+    Generate epidemic curves from Food Poisoning linelisting
+    extracted from the eNotifikasi system.
   </p>
 
   <div class="box">
-    <b>Upload data here:</b><br>
+    <b>Upload data here:</b><br><br>
+
     <input
       type="file"
       id="fileInput"
       accept=".xls,.xlsx,.csv"
     />
+
+    <br><br>
+
+    <b>Select epidemic curve type:</b><br>
+
+    <label>
+      <input
+        type="radio"
+        name="curveType"
+        value="weekly"
+        checked
+      />
+      Weekly epidemic curve
+      <em>(Epid Minggu – Tarikh Onset)</em>
+    </label>
+
+    <br>
+
+    <label>
+      <input
+        type="radio"
+        name="curveType"
+        value="daily"
+      />
+      Date-based epidemic curve
+      <em>(Tarikh Onset)</em>
+    </label>
+
+    <br><br>
+
     <button onclick="run()">
       ➤ Generate Epidemic Curve
     </button>
@@ -39,16 +70,25 @@
   <hr>
 
   <p class="note">
-    <br><br><br>
+    <br>
     <b><u>Notes:</u></b><br><br>
-    <b>Data requirement:</b><br>
-    This app uses the following eNotis fields:
+
+    <b>Data requirements:</b>
     <ul>
-      <li><em>Epid Tahun (Tkh Onset)</em></li>
-      <li><em>Epid Minggu (Tkh Onset)</em></li>
+      <li>
+        <em>Epid Tahun (Tkh Onset)</em> and
+        <em>Epid Minggu (Tkh Onset)</em>
+        — for weekly epidemic curve
+      </li>
+      <li>
+        <em>Tarikh Onset</em>
+        — for date-based epidemic curve
+      </li>
     </ul>
-      <br><b>Data privacy & confidentiality:</b><br>
-    All processing is done locally in the browser, no uploaded data will be saved into any databases. 
+
+    <b>Data privacy & confidentiality:</b><br>
+    All processing is performed locally in the browser.
+    No uploaded data is stored or transmitted.
   </p>
 
   <!-- App Logic -->
