@@ -31,6 +31,18 @@
       accept=".xls,.xlsx,.csv"
     />
 
+        <button onclick="run()">
+      ➤ Generate Epidemic Curve
+    </button>
+  </div>
+
+  <div style="margin-top:15px;">
+  <label>
+    <input type="checkbox" id="toggleSummary"  />
+    _
+  </label>
+</div>
+
     <br><br>
 
     <b>Select epidemic curve type:</b><br>
@@ -60,22 +72,10 @@
 
     <br><br>
 
-    <button onclick="run()">
-      ➤ Generate Epidemic Curve
-    </button>
-  </div>
-
   <div id="chart"></div>
 
   <hr>
   
-<div style="margin-top:15px;">
-  <label>
-    <input type="checkbox" id="toggleSummary"  />
-    _
-  </label>
-</div>
-
 <div
   id="summaryBox"
   style="
@@ -87,23 +87,11 @@
   ">
 </div>
   
+  <hr>
+  
   <p class="note">
     <br>
     <b><u>Notes:</u></b><br><br>
-
-    <b>Data requirements:</b>
-    <ul>
-      <li>
-        <em>Epid Tahun (Tkh Onset)</em> and
-        <em>Epid Minggu (Tkh Onset)</em>
-        — for weekly epidemic curve
-      </li>
-      <li>
-        <em>Tarikh Onset</em>
-        — for date-based epidemic curve
-      </li>
-    </ul>
-
     <b>Data privacy & confidentiality:</b><br>
     All processing is performed locally in the browser.
     No uploaded data is stored or transmitted.
