@@ -234,7 +234,7 @@ title: {
         curveType === "weekly"
           ? "Epidemiological Week (Onset)"
           : "Date of Onset",
-      tickangle: curveType === "weekly" ? 45 : 0
+      tickangle: curveType === "weekly" ? -45 : 0
     },
     yaxis: {
       title: "Number of cases"
