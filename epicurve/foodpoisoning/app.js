@@ -77,14 +77,31 @@ function aggregateWeeklyOnset(data, yearCol, weekCol) {
 /* ================================
    DAILY (ONSET DATE)
 ================================ */
+
+function excelDateToJSDate(serial) {
+  // Excel date epoch: 1899-12-30
+  const excelEpoch = new Date(Date.UTC(1899, 11, 30));
+  return new Date(excelEpoch.getTime() + serial * 86400000);
+}
+
 function aggregateDailyOnset(data, dateCol) {
   const map = {};
 
   data.forEach(row => {
-    const rawDate = row[dateCol];
-    if (!rawDate) return;
+    let raw = row[dateCol];
+    if (!raw) return;
 
-    const date = new Date(rawDate);
+    let date;
+
+    // Case 1: Excel serial number
+    if (typeof raw === "number") {
+      date = excelDateToJSDate(raw);
+    }
+    // Case 2: String date
+    else {
+      date = new Date(raw);
+    }
+
     if (isNaN(date)) return;
 
     const key = date.toISOString().split("T")[0];
@@ -95,6 +112,7 @@ function aggregateDailyOnset(data, dateCol) {
     .map(([k, v]) => ({ label: k, value: v }))
     .sort((a, b) => new Date(a.label) - new Date(b.label));
 }
+
 
 /* ================================
    STATS
