@@ -173,6 +173,23 @@ function plotEpi(data, title, curveType) {
 
   const summary = generateSummary(x, y, m, s, curveType);
 
+// ---------- SHOW SUMMARY ----------
+const summaryBox = document.getElementById("summaryBox");
+const toggle = document.getElementById("toggleSummary");
+
+summaryBox.innerHTML =
+  "<b>English:</b> " +
+  summary.en +
+  "<br><br><b>Bahasa Melayu:</b> " +
+  summary.bm;
+
+summaryBox.style.display = toggle.checked ? "block" : "none";
+
+toggle.onchange = () => {
+  summaryBox.style.display = toggle.checked ? "block" : "none";
+};
+
+   
   const traces = [
     {
       x,
@@ -208,16 +225,10 @@ function plotEpi(data, title, curveType) {
   ];
 
   Plotly.newPlot("chart", traces, {
-    title: {
-      text:
-        title +
-        "<br><sup><b>English:</b> " +
-        summary.en +
-        "<br><b>Bahasa Melayu:</b> " +
-        summary.bm +
-        "</sup>",
-      x: 0.5
-    },
+title: {
+  text: title,
+  x: 0.5
+},
     xaxis: {
       title:
         curveType === "weekly"
