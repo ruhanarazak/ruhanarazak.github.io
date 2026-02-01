@@ -18,13 +18,59 @@
     Easily generate an epidemic curve from Food Poisoning linelisting extracted from eNotifikasi online system.
   </p>
 
+=============================================================
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Food Poisoning Epidemic Curve (Onset-based)</title>
+
+  <!-- Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <h1>Food Poisoning Epidemic Curve Generator</h1>
+
+  <p class="subtitle">
+    <b>Epidemic Curve Generator for Food Poisoning</b><br>
+    Easily generate an epidemic curve from Food Poisoning linelisting extracted from eNotifikasi online system.
+    
+  </p>
+
   <div class="box">
-    <input type="file" id="fileInput" accept=".xls,.xlsx,.csv" />
-    <button onclick="run()">Generate Epidemic Curve</button>
+    <input
+      type="file"
+      id="fileInput"
+      accept=".xls,.xlsx,.csv"
+    />
+    <button onclick="run()">
+      Generate Epidemic Curve
+    </button>
   </div>
 
   <div id="chart"></div>
 
+  <hr>
+
+  <p class="note">
+    <strong>Data requirement:</strong><br>
+    This app uses the following eNotis fields:
+    <ul>
+      <li><em>Epid Tahun (Tkh Onset)</em></li>
+      <li><em>Epid Minggu (Tkh Onset)</em></li>
+    </ul>
+    All processing is done locally in the browser.
+  </p>
+
+  <!-- App Logic -->
   <script src="app.js"></script>
+
 </body>
 </html>
