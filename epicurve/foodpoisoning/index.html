@@ -69,22 +69,38 @@
 
   <hr>
 
-  <div style="margin-top:15px;">
-  <label>
-    <input type="checkbox" id="toggleSummary"  />
-    _
-  </label>
-  
+<hr>
+
 <div
-  id="summaryBox"
+  id="summaryContainer"
   style="
-    margin-top:10px;
-    font-size:13px;
-    background:#f5f5f5;
-    padding:10px;
-    border-left:4px solid #999;
-  ">
-</div></div>
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 15px;
+  "
+>
+  <!-- Checkbox -->
+  <div>
+    <input type="checkbox" id="toggleSummary" />
+  </div>
+
+  <!-- Summary box -->
+  <div
+    id="summaryBox"
+    style="
+      font-size: 13px;
+      background: #f5f5f5;
+      padding: 10px;
+      border-left: 4px solid #999;
+      flex: 1;
+    "
+  >
+  </div>
+</div>
+
+<hr>
+
   
   <hr>
   
