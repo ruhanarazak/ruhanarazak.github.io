@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Food Poisoning Epidemic Curve (Onset-based)</title>
+  <title>Epidemic Curve Generator: Food Poisoning</title>
 
   <!-- Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
@@ -14,22 +14,23 @@
 
 <body>
 
-  <h1>Food Poisoning Epidemic Curve Generator</h1>
+  <h1>Epidemic Curve Generator: Food Poisoning</h1>
 
   <p class="subtitle">
-    <b>Epidemic Curve Generator for Food Poisoning</b><br>
+    <b>Epidemic Curve Generator for Food Poisoning</b><br><br>
     Easily generate an epidemic curve from Food Poisoning linelisting extracted from eNotifikasi online system.
     
   </p>
 
   <div class="box">
+    <b>Upload data here:</b><br>
     <input
       type="file"
       id="fileInput"
       accept=".xls,.xlsx,.csv"
     />
     <button onclick="run()">
-      Generate Epidemic Curve
+      Generate Epidemic Curve ☺
     </button>
   </div>
 
@@ -38,13 +39,15 @@
   <hr>
 
   <p class="note">
-    <strong>Data requirement:</strong><br>
+    <strong>Notes:</strong><br><br>
+    <b>Data requirement:</b><br>
     This app uses the following eNotis fields:
     <ul>
       <li><em>Epid Tahun (Tkh Onset)</em></li>
       <li><em>Epid Minggu (Tkh Onset)</em></li>
     </ul>
-    All processing is done locally in the browser.
+      <br><b>Data privacy & confidentiality:</b><br>
+    All processing is done locally in the browser, no uploaded data will be saved into any databases. 
   </p>
 
   <!-- App Logic -->
