@@ -65,7 +65,7 @@
             left: 0;
             right: 0;
             bottom: 0; 
-            background: url('img/ornamentsemalessv3.png');
+            background: url('https://ruhanarazak.github.io/img/ornamentsemalessv3.png');
             opacity: 1.0;
         }
         
@@ -111,6 +111,207 @@
             margin: 0.5rem 0;
         }
 
+       /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+        
+        .section {
+            margin-top: 2rem; 
+            margin-bottom: 3rem;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .card {
+            background-color: var(--cardbg); 
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-header {
+            background-color: var(--cardheader);
+            color: white;
+            padding: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent);
+        }
+        
+        .btn-accent:hover {
+            background-color: #03045e;
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card-btn {
+            margin-top: 0.5rem;
+            align-self: center;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--text);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .copyright {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .event-details {
+                padding: 0.75rem 1.5rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .logo {
+                height: 60px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+
+            .event-details {
+                width: 100%;
+                padding: 0.75rem;
+            }
+
+            .logo {
+                height: 50px;
+            }
+        }
+        
       </style>
   
 </head>
@@ -118,14 +319,12 @@
 
       <header>
         <div class="container header-content">
-            <img src="img/pimg_circlet.png" alt="" class="logo">
-            <h4> </h4>
-            <div class="subtitle">ruhanarazak.github.io</div>
-                     
             <div class="btn-group">
-                <a href="./" class="btn btn-accent">Home</a>
-                <a href="./about" class="btn btn-accent">About</a>
-                <a href="./contact" class="btn btn-accent">Contact</a>
+              <img src="https://ruhanarazak.github.io/img/pimg_circlet.png" alt="" class="logo">  
+                <a href="./" class="btn btn-outline">Home</a>
+                <a href="./" class="btn btn-accent">Apps</a>
+                <a href="./about" class="btn btn-outline">About</a>
+                <a href="./contact" class="btn btn-outline">Contact</a>
             </div>
         </div>
     </header>
