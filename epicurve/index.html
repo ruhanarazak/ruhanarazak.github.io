@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
 <head>
-  <meta charset="UTF-8" />
-  <title>rr_epicurve</title>
-
-  <!-- Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
-  <link rel="stylesheet" href="style.css" />
-
-      <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ruhanarazak.github.io">
+    <title>rr_epicurve</title>
+    <link rel="icon" type="image/x-icon" href="https://ruhanarazak.github.io/img/pimg_circlet_ico.ico"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
         :root {
             --primary: #0d0d0d;
             --primary-dark: #000000;
             --secondary: #c2bd9f;
             --accent: #696659;
-            --text: ##696659;
+            --text: #696659;
             --text-light: #a8a492;
             --cardbg: #c5c3c6;
             --cardheader: #6e6a6f;
@@ -109,8 +109,8 @@
             gap: 8px;
             margin: 0.5rem 0;
         }
-
-       /* Main Content */
+        
+        /* Main Content */
         main {
             padding: 3rem 0;
         }
@@ -311,12 +311,9 @@
                 height: 50px;
             }
         }
-        
-      </style>
-  
+    </style>
 </head>
 <body>
-
       <header>
         <div class="container header-content">
             <div class="btn-group">
@@ -329,18 +326,33 @@
         </div>
     </header>
 <br>
-  <h1>Epidemic Curve Generator</h1>
-  <p class="subtitle">
-    eNotis linelist → Weekly epidemic curve with Mean, Alert & Action lines
-  </p>
-
-  <div class="box">
-    <input type="file" id="fileInput" accept=".xls,.xlsx,.csv" />
-    <button onclick="run()">Generate Epidemic Curve</button>
-  </div>
-
-  <div id="chart"></div>
-
-  <script src="app.js"></script>
+    
+    <main class="container">      
+        <section class="section">
+            <h4>Epidemic Curve Generators</h4><br>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-icons"></i> Epidemic Curve Generators
+                    </div>
+                    <div class="card-body">
+                        <p><b>Food Poisoning</b>
+                        <br>Generate Food Poisoning epidemic curve from eNotis line listing data.</p>
+                        <a href="./epicurve" class="btn card-btn">Food Poisoning<br>Epidemic Curve Generator</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Contact</a>
+            </div>
+            <p class="copyright">© 2026 DrRuhanaRazak. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
