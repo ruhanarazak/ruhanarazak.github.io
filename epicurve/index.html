@@ -311,6 +311,34 @@
                 height: 50px;
             }
         }
+
+.card-row {
+    display: flex;
+    align-items: center;      /* align atas-bawah cantik */
+    gap: 1.5rem;
+}
+
+.card-text {
+    flex: 1;                  /* teks ambil ruang kiri */
+}
+
+.card-action {
+    flex-shrink: 0;           /* button tak mengecil */
+}
+
+/* Mobile friendly */
+@media (max-width: 768px) {
+    .card-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card-action .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+        
     </style>
 </head>
 <body>
@@ -335,11 +363,24 @@
                     <div class="card-header">
                         <i class="fa-solid fa-icons"></i> Epidemic Curve Generators
                     </div>
-                    <div class="card-body">
-                        <p><b>Food Poisoning</b>
-                        <br>Generate Food Poisoning epidemic curve from eNotis line listing data.</p>
-                        <a href="./epicurve" class="btn card-btn">Food Poisoning<br>Epidemic Curve Generator</a>
-                    </div>
+<div class="card-body">
+    <div class="card-row">
+        <div class="card-text">
+            <p>
+                <b>Food Poisoning</b><br>
+                Generate Food Poisoning epidemic curve from eNotis line listing data.
+            </p>
+        </div>
+
+        <div class="card-action">
+            <a href="./epicurve/foodpoisoning" class="btn">
+                Food Poisoning<br>
+                Epicurve Generator
+            </a>
+        </div>
+    </div>
+</div>
+
                 </div>
             </div>
         </section>
