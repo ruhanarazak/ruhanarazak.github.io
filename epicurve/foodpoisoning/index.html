@@ -22,21 +22,7 @@
     extracted from the eNotifikasi system.
   </p>
 
-  <div class="box">
-    <b>Upload data here:</b><br><br>
-
-    <input
-      type="file"
-      id="fileInput"
-      accept=".xls,.xlsx,.csv"
-    />
-
-        <button onclick="run()">
-      ➤ Generate Epidemic Curve
-    </button>
-  </div>
-
-    <br><br>
+   <br><br>
 
     <b>Select epidemic curve type:</b><br>
 
@@ -61,7 +47,23 @@
       Onset date - based epidemic curve
     </label>
 
-    <br><br>
+  <br>
+  
+  <div class="box">
+    <b>Upload data here:</b><br><br>
+
+    <input
+      type="file"
+      id="fileInput"
+      accept=".xls,.xlsx,.csv"
+    />
+
+        <button onclick="run()">
+      ➤ Generate Epidemic Curve
+    </button>
+  </div>
+
+  <br><br>
 
   <div id="chart"></div>
 
