@@ -323,7 +323,8 @@
 }
 
 .card-action {
-    flex-shrink: 0;           /* button tak mengecil */
+    flex-shrink: 0;   /* button tak mengecil */
+    order: -1;        /* <-- INI yang pindahkan button ke kiri */
 }
 
 /* Mobile friendly */
@@ -347,7 +348,7 @@
             <div class="btn-group">
               <img src="https://ruhanarazak.github.io/img/pimg_circlet.png" alt="" class="logo">  
                 <a href="https://ruhanarazak.github.io/" class="btn btn-outline">Home</a>
-                <a href="./" class="btn btn-accent">Apps</a>
+                <a href="https://ruhanarazak.github.io/apps" class="btn btn-accent">Apps</a>
                 <a href="https://ruhanarazak.github.io/about" class="btn btn-outline">About</a>
                 <a href="https://ruhanarazak.github.io/contact" class="btn btn-outline">Contact</a>
             </div>
@@ -365,18 +366,17 @@
                     </div>
 <div class="card-body">
     <div class="card-row">
-        <div class="card-text">
-            <p>
-                <b>Food Poisoning</b><br>
-                Generate Food Poisoning epidemic curve from eNotis line listing data.
-            </p>
-        </div>
-
         <div class="card-action">
             <a href="./epicurve/foodpoisoning" class="btn">
                 Food Poisoning<br>
                 Epicurve Generator
             </a>
+        </div>
+        <div class="card-text">
+            <p>
+                <b>Food Poisoning</b><br>
+                Generate Food Poisoning epidemic curve from eNotis line listing data.
+            </p>
         </div>
     </div>
 </div>
