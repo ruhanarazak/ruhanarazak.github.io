@@ -9,9 +9,127 @@
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
   <link rel="stylesheet" href="style.css" />
+
+      <style>
+        :root {
+            --primary: #0d0d0d;
+            --primary-dark: #000000;
+            --secondary: #c2bd9f;
+            --accent: #696659;
+            --text: ##696659;
+            --text-light: #a8a492;
+            --cardbg: #c5c3c6;
+            --cardheader: #6e6a6f;
+            --eventdetails: rgba(255, 255, 255, 0.15);
+            --bodybg: #f7f7f5;
+        }
+
+        html {
+            font-size: 80%;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--bodybg);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0; 
+            background: url('img/ornamentsemalessv3.png');
+            opacity: 1.0;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            height: 80px;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+        
+        .event-details {
+            background-color: var(--eventdetails); 
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(5px);
+            max-width: 90%;
+        }
+        
+        .date, .location {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin: 0.5rem 0;
+        }
+
+      </style>
+  
 </head>
 <body>
 
+      <header>
+        <div class="container header-content">
+            <img src="img/pimg_circlet.png" alt="" class="logo">
+            <h4> </h4>
+            <div class="subtitle">ruhanarazak.github.io</div>
+                     
+            <div class="btn-group">
+                <a href="./" class="btn btn-accent">Home</a>
+                <a href="./about" class="btn btn-accent">About</a>
+                <a href="./contact" class="btn btn-accent">Contact</a>
+            </div>
+        </div>
+    </header>
+<br>
   <h1>Epidemic Curve Generator</h1>
   <p class="subtitle">
     eNotis linelist → Weekly epidemic curve with Mean, Alert & Action lines
