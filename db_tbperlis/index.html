@@ -18,6 +18,16 @@
       height: 100%;
       border: none;
     }
+    .hide-looker-branding {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 160px;
+  height: 40px;
+  background: #ffffff; /* boleh tukar ikut footer */
+  z-index: 9999;
+    }
+
   </style>
 </head>
 
@@ -26,5 +36,7 @@
     src="https://lookerstudio.google.com/embed/reporting/130ede9e-1636-4ee9-ab44-90f9922e668f/page/p_9lqrzapp0d?rm=minimal"
     allowfullscreen>
   </iframe>
+  
+  <div class="hide-looker-branding"></div>
 </body>
 </html>
